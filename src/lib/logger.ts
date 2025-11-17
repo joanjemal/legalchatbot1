@@ -8,7 +8,7 @@ export interface LogContext {
   component?: string;
   operation?: string;
   duration?: number;
-  data?: any;
+  data?: unknown;
 }
 
 export class Logger {

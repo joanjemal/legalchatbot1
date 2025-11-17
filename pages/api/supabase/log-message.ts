@@ -50,7 +50,7 @@ export default async function handler(
     console.log('📝 [LOG-MESSAGE] Logging message for chat:', chat_id);
 
     // Insertar el mensaje en la tabla 'messages'
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('messages')
       .insert([
         {

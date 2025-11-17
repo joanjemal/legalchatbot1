@@ -53,7 +53,7 @@ export default async function handler(
     const contentString = JSON.stringify(structured_data_json);
 
     // Insertar en la tabla 'messages' con role='document_data'
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('messages')
       .insert([
         {

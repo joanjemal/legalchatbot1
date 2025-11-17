@@ -29,8 +29,9 @@ console.log('🔧 [SUPABASE] Testing connection...');
     } else {
       console.log('✅ [SUPABASE] Connection test successful');
     }
-  } catch (err: any) {
-    console.error('❌ [SUPABASE] Connection test error:', err);
+  } catch (err: unknown) {
+    const errorMessage = err instanceof Error ? err.message : String(err);
+    console.error('❌ [SUPABASE] Connection test error:', errorMessage);
   }
 })();
 
